@@ -12,32 +12,31 @@ export class PacienteController {
     constructor(private _pacienteService: PacienteService) {}
 
     @Get('ListarPacientes')
-    mostrarUsuario(@Res() response)
+    mostrarPaciente(@Res() response)
     {
-        const usuarios = this._pacienteService.mostrarPacientes();
-        return response.send(usuarios);
+        const pacientes = this._pacienteService.mostrarPacientes();
+        return response.send(pacientes);
     }
 
     @Get('Paciente/:id')
     obtenerUno(@Req() request, @Res() response,@Body() bodyParams) {
         const respuesta = {bodyParams: bodyParams};
-        return response.send(respuesta);
+        const id = request.params.id;
+
+        const paciente = this._pacienteService.obtenerPeciente(id);
+        return response.status(201).send(paciente)
     }
 
-    //@Put('Paciente/:id')
-    @Put('Paciente/:id')
+    @Put('editarPaciente/:id')
     editarUno(@Res() response,@Body() selectPaciente,@Param('id') id, @Body() updatePaciente) {
-        const usuarios = this._pacienteService.editarPacientes(updatePaciente,id);
-        return response.send(usuarios);
+        const pacientes = this._pacienteService.editarPacientes(updatePaciente,id);
+        return response.send(pacientes);
     }
-
 
     @Post('crearPaciente')
-    crearUsuario(@Body(new PacientePipe(PACIENTE_SCHEMA))nuevoPaciente) {
+    crearPaciente(@Res() response,@Body(new PacientePipe(PACIENTE_SCHEMA)) nuevoPaciente) {
         const pacienteCreado = this._pacienteService.crearPaciente(nuevoPaciente);
-        return nuevoPaciente;
+        return response.status(201).send(nuevoPaciente);
     }
-
-
 }
 

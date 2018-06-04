@@ -1,5 +1,4 @@
 import {Injectable} from '@nestjs/common';
-import {Medicamento} from "./medicamento.service";
 
 @Injectable()
 export class PacienteService {
