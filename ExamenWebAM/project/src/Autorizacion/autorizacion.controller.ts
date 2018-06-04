@@ -1,13 +1,13 @@
 import {Body, Controller, Post, Req, Res} from "@nestjs/common";
+import {PeticionErroneaException} from "../excepciones/peticion-erronea.exception";
 import {error} from "util";
-import {PeticionErroneaException} from "./exceptions/peticion-erronea.exception";
 
 
 @Controller('Autorizacion')
 export class AutorizacionController{
 
     usuario = {
-        usuario: 'adrianeguez',
+        usuario: 'alexis',
         password: 12345678910,
     };
 
@@ -15,7 +15,7 @@ export class AutorizacionController{
     @Post('iniciarSesion')
     iniciarSesion(@Req() request,
                   @Res() response, @Body("usuario") usuario:string,
-                  @Body("password") password:number){
+    @Body("password") password:number){
         const parametros = {
             nombreCookie: 'token',
             valorCookie: this.usuario.usuario,
@@ -28,7 +28,11 @@ export class AutorizacionController{
             })
 
         } else {
-            throw new PeticionErroneaException('No se puede iniciar Sesion, datos de ingreso invalidos', error, 10)
+            throw new PeticionErroneaException(
+                'No se puede iniciar Sesion, Datos no Registrados',
+                error,
+                10)
+
         }
 
     }
@@ -44,13 +48,13 @@ export class AutorizacionController{
         if (existeCookie) {
             response.cookie(parametros.nombreCookie, parametros.valorCookie)
             return response.send({
-                mensaje: 'Usted Salio del sistema'
+                mensaje: 'Salio del Sistema'
             })
         } else {
             return response
                 .status(404)
                 .send({
-                    mensaje: 'No encontramos cookie'
+                    mensaje: 'Cookie No encontrada'
                 })
         }
     }

@@ -15,14 +15,9 @@ export const PACIENTE_SCHEMA = Joi.object().keys({
 
         fechaNacimiento: Joi
             .string()
-            .alphanum()
-            .integer(),
+            .alphanum(),
 
         hijos: Joi
-            .number()
-            .integer(),
-
-        tieneSeguro: Joi
-            .booleanValue(),
+            .number(),
 
     });
