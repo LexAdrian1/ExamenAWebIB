@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="549c1937-390b-4e26-a2b2-58d6799c96a3" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/project/src/medicamento.controller.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/src/pipes/medicamento.pipe.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/src/paciente.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/paciente.controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/src/paciente.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/paciente.service.ts" afterDir="false" />
-    </list>
+    <list default="true" id="549c1937-390b-4e26-a2b2-58d6799c96a3" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -37,14 +32,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="medicamento.controller.ts" pinned="false" current-in-tab="true">
+      <file leaf-file-name="medicamento.controller.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/project/src/medicamento.controller.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="30" column="26" selection-start-line="30" selection-start-column="26" selection-end-line="30" selection-end-column="26" />
+            <state relative-caret-position="204">
+              <caret line="12" column="30" lean-forward="true" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
               <folding>
                 <element signature="e#0#51#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="autorizacion.controller.ts" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/project/src/autorizacion.controller.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="833">
+              <caret line="49" column="5" selection-start-line="49" selection-start-column="5" selection-end-line="49" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -101,7 +105,7 @@
   <component name="NodeModulesDirectoryManager">
     <handled-path value="$PROJECT_DIR$/project/node_modules" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="673" />
     <option name="width" value="694" />
     <option name="height" value="735" />
@@ -198,12 +202,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1528050052818</updated>
-      <workItem from="1528050054042" duration="25457000" />
+      <workItem from="1528050054042" duration="25561000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25457000" />
+    <option name="totallyTimeSpent" value="25561000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1376" height="744" extended-state="6" />
@@ -289,13 +293,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="43" selection-start-line="4" selection-start-column="43" selection-end-line="4" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/project/src/autorizacion.controller.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="833">
-          <caret line="49" column="5" selection-start-line="49" selection-start-column="5" selection-end-line="49" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -393,11 +390,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/project/src/medicamento.controller.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="30" column="26" selection-start-line="30" selection-start-column="26" selection-end-line="30" selection-end-column="26" />
+        <state relative-caret-position="204">
+          <caret line="12" column="30" lean-forward="true" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
           <folding>
             <element signature="e#0#51#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/src/autorizacion.controller.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="833">
+          <caret line="49" column="5" selection-start-line="49" selection-start-column="5" selection-end-line="49" selection-end-column="5" />
         </state>
       </provider>
     </entry>
