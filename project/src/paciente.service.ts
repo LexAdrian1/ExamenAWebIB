@@ -1,4 +1,5 @@
 import {Injectable} from '@nestjs/common';
+import {Medicamento} from "./medicamento.service";
 
 @Injectable()
 export class PacienteService {
@@ -13,25 +14,31 @@ export class PacienteService {
         return this.pacientes
     }
 
+    obtenerPeciente(id: string): Paciente[]{
+
+        let resultado = this.pacientes.filter((paciente:Paciente)=>{
+            return paciente.id==id
+        });
+
+        return resultado;
+    }
+
 
     editarPacientes(paciente: Paciente, id: string) {
-        //Find index of specific object using findIndex method.
-        const objIndex = this.pacientes.findIndex((obj => obj.nombres == id));
+        const objIndex = this.pacientes.findIndex((obj => obj.id == id));
 
-        //Log object to Console.
-        console.log("Before update: ", this.pacientes[objIndex];
-
-        //Update object's name property.
+        this.pacientes[objIndex].nombres = paciente.nombres;
         this.pacientes[objIndex].apellidos = paciente.apellidos;
-
-        //Log object to console again.
-        console.log("After update: ", this.pacientes[objIndex]);
+        this.pacientes[objIndex].fechaNacimiento = paciente.fechaNacimiento;
+        this.pacientes[objIndex].hijos = paciente.hijos;
+        this.pacientes[objIndex].tieneSeguro = paciente.tieneSeguro;
 
         return this.pacientes;
     }
 
 }
     export interface Paciente {
+        id: string;
         nombres: string;
         apellidos: string;
         fechaNacimiento: string;

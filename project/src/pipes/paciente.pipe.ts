@@ -19,9 +19,6 @@ export class PacientePipe implements PipeTransform {
         } else {
             return jsonAValidar;
         }
-
-
     }
-
 
 }
